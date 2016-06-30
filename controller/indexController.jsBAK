@@ -1,0 +1,34 @@
+//angular module
+var app = angular.module("ec-backend",[]);
+
+// controller 2nd
+app.controller("dataController", 
+	function($scope,$http){
+		$http.get("/api/page")
+		.success(function (response){
+		$scope.pages = response;
+		console.log($scope.pages);
+		//select 1st object
+		$scope.id = response[0];
+		console.log($scope.id);
+	});
+
+	// handle event
+	$scope.update =  function(id){
+	alert(id);
+	// $http.put("/api/page/" + id)
+	// .success(function(response){
+	// 	$scope.pages = response;
+	// 	})
+	}
+	//remove
+	// $scope.remove = function(id){
+	// 	// alert(id);
+	// 	$http.delete("/api/content/" + id)
+	// 	.success(function(response){
+	// 		$scope.contents = response; 
+	// 	})
+	// }
+});
+
+

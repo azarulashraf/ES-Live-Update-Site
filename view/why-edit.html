@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+    <title>ES Transformation</title>
+	
+    <!-- css files -->
+    <link href="/asset/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+  	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
+  	<link href="/asset/css/HPEfont.css" rel="stylesheet">
+	<link href="/asset/css/customer/setup.css" rel="stylesheet">
+	<link href="/asset/css/main.css" rel="stylesheet">
+    <link href="/asset/css/why.css" rel="stylesheet">
+	<!-- <link href="/asset/css/animate.css" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="/asset/css/angular-notify-material.min.css" id="notifyTheme" rel="stylesheet">
+	<link href="/asset/css/style.css" rel="stylesheet"><!-- 
+    <link href="/asset/css/font-awesome.css" rel="stylesheet"> --><!-- 
+    <link href="/asset/css/directives/ragStatus.css" rel="stylesheet">
+    <link href="/asset/css/directives/zselect.css" rel="stylesheet">
+    
+
+	<!-- js files -->
+	<script src="/bower_components/angular/angular.js"></script>
+
+	<!-- angular controller -->
+  	<script src="/whyController.js" type="text/javascript"></script>
+  	<script src="/asset/js/angular-notify.min.js"></script>	
+</head>
+
+<!-- connect to angular module  -->
+<body ng-app="ec-backend" class="min-width fullpage-wrapper">
+    <div class="container">
+		<header  ui-view="navbar">
+			<nav>
+				<a href="index.html" class="sitelogo"><img src="/asset/img/icons/IT_transformation_white.png" alt="Image description." width="30px" /></a>
+				<ul class="horizontal-list">
+					<li class="active"><a href="why.html" title="Why HPE">Why HPE</a></li>
+					<li><a href="methodology.html" title="Methodology">Methodology</a></li>
+					<li><a href="journeys.html" title="Journeys">Journeys</a></li>
+					<li><a href="success.html" title="Success Stories">Success Stories</a></li>
+					<li><a href="dashboards.html" title="Dashboard">Dashboards</a></li>
+				</ul>
+				<a  class="actions" href="why.html">
+					<i class="hpe-back"></i>
+				</a>
+			</nav>
+		</header>
+    </div>
+    <div ng-controller="dataController" id="content">
+		<div class="main container-fluid">
+			<div class="row">
+				<div class="whyhpe-title">
+					<h1>
+						<input type="text" ng-model="data.header.title"/>
+					</h1>
+					<h3 class="light" >
+						<input type="text" ng-model="data.header.desc"/>
+					</h3>
+    				<div notifybar style="position:absolute;top:0;right:0"></div>
+				</div>
+				<div class="whyhpe-container animated slideInUp">
+					<div class="row">
+						<div class="col-xs-8 center-block">
+							<div id="hexmenu" class="row">
+								<div class="col-md-4 col-xs-4 col-lg-4">
+									<a href="#philo" class="philo"></a>
+									<!-- <h3 class="fontSemiBold ng-binding">ACCELERAT</h3> -->
+									<p class="ng-binding">
+									<textarea ng-model="data.content.philo"/></textarea></p>
+								</div>
+								<div class="col-md-4 col-xs-4 col-lg-4">
+									<a href="#approach" class="approach"></a>
+									<!-- <h3 class="fontSemiBold ng-binding">MANAGE</h3> -->
+									<p class="ng-binding">
+									<textarea ng-model="data.content.approach"/></textarea></p>
+								</div>
+								<div class="col-md-4 col-xs-4 col-lg-4">
+									<a href="#benefit" class="benefit"></a>
+									<!-- <h3 class="fontSemiBold ng-binding">DE-RISK</h3> -->
+									<!-- <h5>View more</h5> -->
+									<p class="ng-binding">
+									<textarea ng-model="data.content.benefit"/></textarea></p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<h2><input type="text" ng-model="data.footer"/></h2>
+				</div>
+			</div>
+		</div>
+		<button ng-click="update(data)" class="btn btn-success pull-right">Update</button>   
+	</div>
+    <div class="slidecontent">
+        <div id="philo" class="animated slideInRight">
+            <img src="/asset/img/slide_philosophy.png">
+        </div>
+        <div id="approach" class="animated slideInLeft">
+            <img src="/asset/img/slide_approach.png">
+        </div>
+        <div id="benefit" class="animated slideInRight">
+            <img src="/asset/img/slide_benefit.png">
+        </div>
+    </div>
+	
+	<!-- jquery full page js -->
+    <script src="/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+		
+        $(document).ready(function() {
+			
+			$('#hexmenu a').click(function(){
+				
+				 if (! $('#content').hasClass('mini'))
+                {//if doesnt exists, add mini
+                    $('#content').addClass('mini');
+                }
+        
+				 //Check if the tabs menu has active class
+				$('#hexmenu div').removeClass('active');
+				$(this).parent().addClass('active');
+				
+				// Display active tab
+				var currentTab = $(this).attr('href');
+				$('.slidecontent').show();
+				$('.slidecontent div').hide();
+				$(currentTab).show();
+				
+				return false;
+			});
+        });
+    </script>
+    
+</body>
+</html>

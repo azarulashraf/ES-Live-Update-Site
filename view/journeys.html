@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+    <title>ES Transformation</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	
+    <!-- css files -->
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/asset/css/font-awesome.css" rel="stylesheet">
+    <link href="/asset/css/directives/ragStatus.css" rel="stylesheet">
+    <link href="/asset/css/directives/zselect.css" rel="stylesheet">
+    <link href="/asset/css/HPEfont.css" rel="stylesheet">
+    <link href="/asset/css/customer/setup.css" rel="stylesheet">
+    <link href="/asset/css/main.css" rel="stylesheet">
+	<link href="/asset/css/journey.css" rel="stylesheet">
+	<link href="/asset/css/style.css" rel="stylesheet">
+	<!-- <link href="css/animate.css" rel="stylesheet"> -->
+    
+</head>
+
+<body ng-app="DnA" class="min-width">
+    <div class="container">
+		<header  ui-view="navbar">
+			<nav>
+				<a href="index.html" class="sitelogo"><img src="/asset/img/icons/IT_transformation_white.png" alt="Image description." width="30px" /></a>
+				<ul class="horizontal-list">
+					<li><a href="why.html" title="Why HPE">Why HPE</a></li>
+					<li><a href="methodology.html" title="Methodology">Methodology</a></li>
+					<li class="active"><a href="journeys.html" title="Journeys">Journeys</a></li>
+					<li><a href="success.html" title="Success Stories">Success Stories</a></li>
+					<li><a href="dashboards.html" title="Dashboard">Dashboards</a></li>
+					
+				</ul>
+				<a  class="actions" href="javascript:void(0)">
+					<i class="hpe-user"></i>
+				</a>
+			</nav>
+		</header>
+    </div>
+    <div ui-view="content" id="content">
+        <div id="journey" class="journey-bg" auto-scroll is-scrolling="false">
+			<div class="scroll-holder" set-class-when-at-top="fix-to-top">
+				<div class="btn-container">
+				  <div class="row flexmenu flexbox flexcontainer-wrap">
+					<div class="btn-tiles-wrapper col-md-6">
+						<div class="col-xs-3 col-lg-2 btn-tiles step1" title="journey-content-1">
+							<img src="/asset/img/icons/icon_digi_transform.png" width="100%"/>
+						</div>
+						<div class="col-xs-9 col-lg-10 btn-labels journeys">
+							<h3 >Digital Transformation</h3>
+							<p >We’ll help you embrace the opportunities provided in the growing digital disruption, taking you through the fundamental changes to your operating model and capabilities to achieve accelerated business outcomes. </p>
+						</div>
+					</div>
+					<div class="btn-tiles-wrapper col-md-6">
+						<div class="col-xs-3 col-lg-2 btn-tiles step2" title="journey-content-2">
+							<img src="/asset/img/icons/icon_erp.png" width="100%"/>
+						</div>
+						<div class="col-xs-9 col-lg-10 btn-labels journeys">
+							<h3>ERP Disruption</h3>
+							<p>S/4SHAPE is HPE’s and SAP’s joint approach to solution & deliver your journey to the Digital Enterprise, increasing your business agility and flexibility.  We’ll unlock real time data to run the business and service consumers in real-time at point of need.</p>
+						</div>
+					</div>
+					<div class="btn-tiles-wrapper col-md-6">
+						<div class="col-xs-3 col-lg-2 btn-tiles step4" title="journey-content-4">
+							<img src="/asset/img/icons/icon_cont_dev.png" width="100%"/>
+						</div>
+						<div class="col-xs-9 col-lg-10 btn-labels journeys">
+							<h3>Continuous Development &amp; Delivery</h3>
+							<p>In today’s highly disruptive digital ecosystem speed is the new currency, requiring a continuous approach to both development and delivery. Through the use of disruptive technologies we can ensure you have the right capabilities to accelerate development while benefiting from our operational delivery expertise.</p>
+						</div>
+					</div>
+					<div class="btn-tiles-wrapper col-md-6">
+						<div class="col-xs-3 col-lg-2 btn-tiles step3" title="journey-content-3">
+							<img src="/asset/img/icons/icon_cost_reduct.png" width="100%"/>
+						</div>
+						<div class="col-xs-9 col-lg-10 btn-labels journeys">
+							<h3>Business / IT Cost Reduction </h3>
+							<p>To remain competitive, Business and IT need to continually optimize their cost structures. Our breadth and depth of experience in cost optimization will allow you to invest in competitive capabilities, high value and high growth initiatives to continue to prosper in today’s highly disruptive digital economy.</p>
+						</div>
+					</div>
+					<div class="btn-tiles-wrapper col-md-6">
+						<div class="col-xs-3 col-lg-2 btn-tiles step5" title="journey-content-5">
+							<img src="/asset/img/icons/icon_ma_d.png" width="100%"/>
+						</div>
+						<div class="col-xs-9 col-lg-10 btn-labels journeys">
+							<h3>Mergers, Acquisition &amp; Divestitures</h3>
+							<p>You can benefit from our experience of our recent separation to help you through the complexity of an MA&D transformation. These transactions come with expectations for synergistic cost savings, growth and aggressive timeframes for completion.  Our recent separation highlighted that these transactions can be very complex and require further integration beyond Day 1 transaction completion milestones.</p>
+						</div>
+					</div>
+					<div class="btn-tiles-wrapper col-md-6">
+						<div class="col-xs-3 col-lg-2 btn-tiles step6" title="journey-content-6">
+							<img src="/asset/img/icons/icon_iot.png" width="100%"/>
+						</div>
+						<div class="col-xs-9 col-lg-10 btn-labels journeys">
+							<h3>Internet of Things (IOT)</h3>
+							<p>IOT connected devices are rapidly exceeding the number of people on Earth. The amount of information generated by IOT requires new strategies, architecture, analytic tools and capabilities. Together our Hybrid IT and big data capabilities  can provide the required  strategy, architecture and new service models to accelerate your business outcomes</p>
+						</div>
+					</div>
+				  </div>                     
+				</div>
+				<div class="scroll-icon">    
+				  <a href="#" class="icon-up-open-big"></a>
+				</div> 
+			</div>
+        </div>
+		<div class="spinner-wrapper"><img src="/asset/img/rolling.svg" id="spinner" alt="loading..." style="display: none;" /></div>
+        <div class="stories-content">       
+             <!--ajax content goes here -->                     
+        </div>
+    </div>
+
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/asset/js/lib/journeys.js"></script>
+</body>
+</html>

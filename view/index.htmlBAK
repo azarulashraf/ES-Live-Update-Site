@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>EC Update</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- angular and bootstrap -->
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- stylesheet -->
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css"/>
+  <style type="text/css">div.aaa { margin: 50px; }</style>
+
+  <!-- angular controller -->
+  <script src="/indexController.js" type="text/javascript"></script>
+
+</head>
+<!-- connect to angular module  -->
+<body ng-app="ec-backend">
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">EC Update Backend</a>
+    <ul class="nav navbar-nav">
+      <li class="active">
+        <a href="/">Home</a>
+      </li>
+    </ul>
+  </div>
+</nav> 
+
+    <div ng-controller="dataController" class="jumbotron" style="padding:40px;">
+    {{id.title}}
+    {{id.header.title}}
+    {{id.header.desc}}
+    <table class="table table-striped">
+      <tbody>
+        <tr ng-repeat="page in pages | filter:title">
+          <td>{{page.title}}</td>
+          <td>{{page.header.title}}</td>
+          <td>{{page.header.desc}}</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+</body>
+</html>

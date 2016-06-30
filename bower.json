@@ -1,0 +1,20 @@
+{
+  "name": "ec-backend",
+  "description": "ec-backend application for client to edit content",
+  "main": "server.js",
+  "authors": [
+    "zarul"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.3",
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.5"
+  }
+}

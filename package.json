@@ -1,0 +1,19 @@
+{
+  "name": "ec-backend",
+  "version": "1.0.0",
+  "description": "ec-backend application for client to edit content",
+  "main": "server.js",
+  "scripts": {
+    "install": "bower install"
+  },
+  "author": "zarul",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "bower": "^1.7.9",
+    "express": "^4.13.4",
+    "mongodb": "^2.1.19",
+    "mongoose": "^4.4.17",
+    "nodemon": "^1.9.2"
+  }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge"> 
+    <title>ES Transformation</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+	
+	<!-- css files -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/asset/css/font-awesome.css"/>
+    <link rel="stylesheet" href="/asset/css/HPEfont.css"/>
+    <link rel="stylesheet" href="/asset/css/main.css" />
+    <link rel="stylesheet" href="/asset/css/landing.css"/>
+    <link href="/asset/css/style.css" rel="stylesheet">
+</head>
+
+<body ng-app="DnA" class="min-width bgpic ng-scope">
+    <div class="container">
+		<header  ui-view="navbar">
+			<nav>
+				<a href="index.html" class="sitelogo"><img src="/asset/img/icons/IT_transformation_white.png" alt="Image description." width="30px" /></a>
+				<ul class="horizontal-list">
+					<li><a href="why.html" title="Why HPE">Why HPE</a></li>
+					<li><a href="methodology.html" title="Methodology">Methodology</a></li>
+					<li><a href="journeys.html" title="Journeys">Journeys</a></li>
+					<li><a href="success.html" title="Success Stories">Success Stories</a></li>
+					<li><a href="dashboards.html" title="Dashboard">Dashboards</a></li>
+				</ul>
+				<a  class="actions" href="javascript:void(0)">
+					<i class="hpe-user"></i>
+				</a>
+			</nav>
+		</header>
+    </div>
+    <div ui-view="content" id="content" class="ng-scope">
+        <div class="lp-tableCell vidBg ng-scope">
+            <section id="section1">
+                <a href="#" role="button" class="btn" data-toggle="modal" data-backdrop="static" onclick="modalClick()" style="outline: none;"><img src="/asset/img/play_white.png"></a>
+                <!--Setting Font family for this particular H1-->
+                <h1>ES Transformation</h1>
+                  <!--Finish Setting-->
+                  <!--<h3>Synergizing your DNA Experience</h3>-->
+                  <!--<a href="#" class="btn btn-primary custom-button green-btn">Learn more</a>-->
+                </section>
+
+                <!-- Changing path of video to a new video-->
+                <video autoplay="autoplay" loop="" muted="muted" volume="0" id="bgvid" title="background-low res">
+                    <source src="/asset/video/Hpes.mp4" type="video/mp4">
+                </video>  
+
+                <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+                    <div class="modal-dialog">
+                        <div class="modal-content embed-responsive embed-responsive-16by9" style="margin-top: -50px;">
+                            <div class="modal-header" style="border-bottom: none;">
+                              <button id="vidclose" type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                            </div>
+                            <video controls="controls" id="mainvid" class="embed-responsive-item">
+                               <!-- <source src="https://dl.dropboxusercontent.com/u/1898791/dna-portal/splitHP2016.mp4" type="video/mp4" ></source> -->
+                               <source src="/asset/video/HPE_Transform_REBRAND_MP4.mp4" type="video/mp4">
+                            </video>
+                            <!-- Finish changing path-->
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+        </div>
+    </div>
+
+<!--Filtering needed JS to allow video to play automatically-->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--Finish filter-->
+    
+    <!-- endbuild -->
+    <script>
+        //Marketing video controller
+        $('#section1 a').on('click', function(e) {
+            $('#mainvid').get(0).play();
+            $('#bgvid').get(0).pause();
+          });
+          $('#vidclose').on('click', function(e) {
+            $('#mainvid').get(0).pause();
+            $('#bgvid').get(0).play();
+          });
+          $(document).keyup(function(e){
+            if(e.keyCode === 27)
+            $('#mainvid').get(0).pause();
+        });
+
+        function modalClick() {
+            $('#myModal').modal('show');
+        }
+    </script>
+ </body>
+ </html>

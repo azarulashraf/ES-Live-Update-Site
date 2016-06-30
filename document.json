@@ -1,0 +1,52 @@
+{
+  "pages":[{
+    "title":"Why Hpe",
+    "header":{
+      "title":"How Hewlett Packard Enterprise", 
+      "desc":"can transform your business by transforming your IT function"
+    },
+    "content":{
+      "philo":"Partnering to shape your transformation, focused on linking IT to business outcomes with early returns on investment",
+      "approach":"Strategic partnership backed by industry leading frameworks, tools and accelerators while maintaining the day-to-day operations",
+      "benefit":"A modular approach which accelerates value,avoids risks and delivers a holistic link between transformational change and business benefit"
+    },
+    "footer":"By leveraging our proven tools and methodologies"
+  },
+  {
+    "title":"Methodology",
+    "header":{
+      "title":"Transformation is a journey. A safe journey needs a good guide",
+      "desc":"HPE EnACT brings the full power of HPE to your transformation"
+    },
+    "content":"",
+    "footer":"There's so much more to change than technology"
+  },
+  {
+    "title":"Journeys",
+    "header":{
+      "title":"",
+      "desc":""
+    },
+    "content":"",
+    "footer":""
+  },
+  {
+    "title":"Success Stories",
+    "header":{
+      "title":"",
+      "desc":""
+    },
+    "content":"",
+    "footer":""
+  },
+  {
+    "title":"Dashoards",
+    "header":{
+      "title":"",
+      "desc":""
+    },
+    "content":"",
+    "footer":""
+  }
+  ]
+}
